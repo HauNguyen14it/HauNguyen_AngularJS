@@ -1,0 +1,123 @@
+<!--tieu de cua bang-->
+<h1 id="list">Danh sách Sinh viên</h1>
+<!--table hien thi du lieu-->
+<div ng-app="app" class="container">
+    <div ng-controller="tableTestCtrl">
+        <table class="table table-striped" ts-wrapper>
+            <thead>
+            <tr>
+                <th ts-criteria="Id">Id</th>
+                <th ts-criteria="Name|lowercase" ts-default>FirstName</th>
+                <th ts-criteria="Name|lowercase" ts-default>LastName</th>
+                <th ts-criteria="Quantity|parseInt">Day Of Birth</th>
+                <th ts-criteria="Quantity|parseInt">Avarage</th>
+                <th ts-criteria="Name|lowercase" ts-default>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  *ngFor="let student of students">
+                <td>{{student.id}}</td>
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+                <td>{{student.doB}}</td>
+                <td>{{student.average}}</td>
+                <td>{{student.status}}</td>
+    </tr>
+            </tbody>
+        </table>
+<!--<table>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>DOB</th>
+        <th>Avarage</th>
+        <th>Status</th>
+    </tr>
+   
+    <tr  *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.doB}}</td>
+       <td>{{student.average}}</td>
+        <td>{{student.status}}</td>
+    </tr>
+    </table>-->
+<!--end table-->
+
+<!--Thông báo khi nhập lỗi-->
+<div class="container">
+  <div >
+    <!--<h1 id="student-form">Student From</h1>-->
+  <form class="form-horizontal" name="Form" action="javascript:void(0);">
+    <fieldset>
+        <div *ngIf="typemessage" id="thongbao">
+					<div class="alert alert-{{typemessage}}">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+						{{message}}
+					</div>
+				</div>
+
+<!--firstname-->
+        <label for="firstName">Firstname:</label>
+        <input type="text" class="form-control" id="firstname" placeholder="First Name"
+               required='true'
+               [(ngModel)]="firstName" name="firstName"
+               ng-minlength="5"
+               ng-maxlength="10">
+
+<!--lastname-->
+
+        <label for="lastname">Lastname:</label>
+        <input type="text" class="form-control" id="lastname" placeholder="Last Name"
+               required='true'
+               [(ngModel)]="lastName" name="lastName">
+
+<!--Day of birth-->
+      <div class="date">
+        <label for="doB">Day of Birth:</label>
+        <input type="number" min="1" max="31" name="date" required placeholder="1" 
+               required='true'
+               [(ngModel)]="date" name="date">
+	      <input type="number" min="1" max="12" name="month" required placeholder="1"
+               required='true'
+               [(ngModel)]="month" name="month">
+        <select name="year"
+               required='true'
+               [(ngModel)]="year" name="year">
+	          <option>1991</option>
+	          <option>1992</option>
+	          <option>1993</option>
+	          <option>1994</option>
+	          <option>1995</option>
+	          <option>1996</option>
+            <option>1997</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>  
+    </select>
+      </div >
+
+<!--math-->
+
+        <label for="math">Mathematic:</label>
+        <input type="text" class="form-control" id="math" placeholder="Mathematic mark"
+               required='true'
+               [(ngModel)]="mathematic" name="mathematic">
+
+<!--physic-->
+
+        <label for="physic">Physic:</label>
+        <input type="text" class="form-control" id="physic" placeholder="Physic mark"
+               required='true'
+               [(ngModel)]="physic" name="physic">
+
+      <div class="button">
+         <button class="btn btn-default" (click)="addStudent()">Insert</button>
+      </div>
+        </fieldset>
+    </form>
+  </div>

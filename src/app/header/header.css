@@ -1,0 +1,55 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4EEE94;
+}
+
+li {
+    float: right;
+    border-right:1px solid #bbb;
+}
+#name{
+    float: left;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: unset;
+    text-shadow: 2px snow;
+
+}
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid white;
+}
+
+li a:hover:not(.active) {
+    background-color: #436EEE;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+.avatar{
+    width: 120px;
+    height: 120px;
+    margin: 1px 3px 3px 3px;
+}
+.slider{
+    background-color: #99CCFF;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    /*background-image: url("../image/anhbia.jpg");*/
+}

@@ -1,0 +1,111 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#list{
+    margin-left: 40%;
+    color: blue;
+    font-size: 32px;
+}
+#student-form{
+    margin-left: 42%;
+    color: blue;
+    font-size: 32px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+fieldset {
+    margin: 20px 200px 20px 200px;
+    padding:20px 50px 20px 50px;
+}
+fieldset label{
+    margin-left:80px;
+    width:100px;
+    font-size: 18px;
+}
+fieldset input{
+    margin:20px 20px;
+}
+.button{
+    margin-left:45%;
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    color: red;
+    font-style: unset;
+    
+}
+button::hover::not(.active){
+    background-color: lime;
+}
+.date{
+    margin: 0 20%;
+}
+#thongbao{
+    color: red;
+    margin-left: 34%;
+    font-size: 20px;
+}
+
+th.tablesort-sortable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+table .tablesort-sortable:after{
+    content:"";
+    float:right;
+    margin-top:7px;
+    visibility:hidden;
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+
+    border-top:none;
+    border-bottom:4px solid #000;
+}
+
+table .tablesort-desc:after{
+    border-top:4px solid #000;
+    border-bottom:none;
+}
+
+table .tablesort-asc,table .tablesort-desc{
+    background-color:rgba(141, 192, 219, 0.25);
+}
+
+table .tablesort-sortable:hover:after, table .tablesort-asc:after, table .tablesort-desc:after {
+    visibility:visible;
+}
+
+/*
+ * Styling for the table row shown in empty tables
+ */
+
+/* The row is always added as the first row in a table
+   Hide it by default */
+.showIfLast {
+    display: none;
+}
+
+/* Only show it if it is also the last row of the table. */
+.showIfLast:last-child {
+    display: table-row;
+}
+
+.showIfLast td {
+    text-align: center;
+}

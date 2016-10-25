@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BTVN-17-10-2016</title>
+    <link rel="stylesheet" 
+          href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./aap/tablesort.css"/>
+    <!-- Polyfill(s) for older browsers -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <base href="/">
+  </head>
+  <body>
+    <div id="wapper">
+    <app>
+      Loading app...
+    </app>
+
+    <script src="/polyfills.bundle.js"></script>
+    <script src="/vendor.bundle.js"></script>
+    <script src="/main.bundle.js"></script>
+    </div>
+  </body>
+</html>
+<style type="text/css">
+	body{
+
+	}
+	#wapper{
+		margin: 0px auto;
+		width: 100%;
+		background: white	;
+		border: 3px solid black;
+		border-radius: 10px;
+	}
+  </style>
